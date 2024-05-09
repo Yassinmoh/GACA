@@ -16,6 +16,12 @@
 .container {
   width: 100%;
   min-height: 100vh;
+
+
+}
+
+:ng-deep router-outlet{
+  width: 80vw;
 }
 
 .content-wrapper {

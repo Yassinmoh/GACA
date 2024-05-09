@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { NgxIntlTelInputModule } from 'ngx-intl-tel-input/lib/ngx-intl-tel-input.module';
 
 @Component({
   selector: 'app-home-page',

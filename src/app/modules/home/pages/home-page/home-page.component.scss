@@ -1,7 +1,10 @@
 @import 'common.scss';
 
+:host{
+  width: 100%;
+}
 .home__section{
 background: rgba(0, 128, 0, 0.233);
-width: 80vw;
-height: 100vh;
+
+min-height: 100vh;
 }
