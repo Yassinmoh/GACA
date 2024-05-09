@@ -1,12 +1,11 @@
 @import "variables";
 @import "mixins";
 @import "fonts";
-@import "grid";
 
 
 
 body {
-  font-family: $inter-regular, sans-serif;
+  font-family: var(--primary-font), sans-serif;
 }
 
 
