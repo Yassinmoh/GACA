@@ -1,0 +1,125 @@
+@import 'common.scss';
+
+.intro {
+  background: var(--dark-blue);
+  padding: 1rem 2rem 1rem 1rem;
+
+  .intro__text {
+    .text {
+      padding-top: 3rem;
+
+      h2 {
+        @include textStyle(27px, 35.94px, $greta, #ffffff, 700);
+        text-align: center
+      }
+
+      p {
+        @include textStyle(20px, 25.53px, $greta, var(--gray-1), 500);
+        text-align: center;
+        padding: 0.5rem 0;
+      }
+    }
+
+    .airports {
+      margin-top: 2rem;
+
+      p {
+        background: var(--dark-blue-l);
+        padding: 0.3rem 0.8rem;
+        border-radius: 8px;
+        width: fit-content;
+        border: 1px #fff solid;
+        @include textStyle(16px, 18.26px, $greta, #fff, 500);
+
+      }
+
+      h3 {
+        @include textStyle(20px, 25.82px, $greta, var(--gold-color), 700);
+        padding: 1rem 0;
+        width: fit-content;
+      }
+
+      &>div {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin: 0.6rem 0;
+
+        svg {
+          width: 25px;
+          height: 19px;
+        }
+
+        span {
+          @include textStyle(16px, 18.82px, $greta, var(--gray-2), 600);
+        }
+      }
+    }
+
+    .btn {
+      background: var(--highlight-color-2);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      width: fit-content;
+      padding: 0.9rem 1.9rem;
+      border-radius: 6px;
+      margin: 2rem 0;
+
+      span {
+        @include textStyle(16px, 18.82px, $greta, #fff, 500);
+      }
+
+      svg {
+        width: 10px;
+        height: 16px;
+      }
+    }
+  }
+
+  .intro__map {
+    margin-top: 3rem;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+
+@include DesktopScreen {
+  :host {
+    .intro {
+      width: 100%;
+      height: 767px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 1rem 4rem 1rem 1rem;
+      gap: 1rem;
+
+      .intro__text {
+        .text {
+
+          h2,
+          p {
+            text-align: right;
+            width: 70%;
+          }
+        }
+      }
+
+      .intro__map {
+        margin-top: 3rem;
+
+        img {
+          width: 100%;
+          height: 548px;
+        }
+      }
+
+    }
+  }
+}

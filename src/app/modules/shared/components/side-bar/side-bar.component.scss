@@ -1,9 +1,9 @@
 :host{
-  width: 22vw;
+  width: 22%;
 }
 section{
-  background: rgba(255, 0, 0, 0.219);
-  height: 100vh;
+  background: var(--main-bg-color);
+  min-height: 100vh;
   width: 100%;
 
 }

@@ -1,3 +1,4 @@
+@import '../helpers/variables.scss';
 // @font-face {
 //     font-family: $inter-lite;
 //     src: url(../../fonts/Inter-Light.ttf);
@@ -12,8 +13,8 @@
 //     src: url(../../fonts/Inter-Bold.ttf);
 // }
 
-// @font-face {
-//     font-family: $greta;
-//     src: url(../../fonts/Greta-Arabic-AR-LT.ttf);
-// }
+@font-face {
+    font-family: $greta;
+    src: url(../../fonts/Greta-Arabic-AR-LT.ttf);
+}
 

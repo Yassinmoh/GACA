@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import './assets/style/general/common.scss';
 
+@layer reset, primeng;
 
+@layer reset{
+  button{
+    &:hover{
+      display: none;
+    }
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -56,5 +64,5 @@ body {
 
 body {
   margin: 0;
-  font-family:var(--primary-font);
+  font-family:$greta;
 }

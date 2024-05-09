@@ -1,45 +1,37 @@
-// .container {
-//   width: 100%;
-//   display: flex;
-//   align-items: center;
-
-//   &:first-child {
-//     width: 25vw;
-//   }
-
-//   &:last-child {
-//     width: 25vw;
-//   }
-// }
-
-
+@import 'common.scss';
 .container {
   width: 100%;
   min-height: 100vh;
+  background: var(--main-bg-color);
+  display: flex;
 
+  .sidebar{
+    display: none;
+  }
+
+  .content-wrapper {
+    width: 100%;
+    padding: 0 0.3rem;
+
+
+  }
 
 }
 
-:ng-deep router-outlet{
+:ng-deep router-outlet {
   width: 80vw;
 }
 
-.content-wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 100%; /* Take up remaining space after sidebar */
+
+@include DesktopScreen{
+  :host{
+    .container {
+      .sidebar{
+        display: block;
+      }
+      .content-wrapper {
+        padding: 0 1.5rem;
+      }
+    }
+  }
 }
-
-// app-header {
-//   width: 100%; /* Set header width to 100% */
-// }
-
-// app-sidebar {
-//   width: 25%;
-//   background-color: #f0f0f0; /* Example background color for sidebar */
-// }
-
-// router-outlet {
-//   width: 75%; /* Set main content area width */
-//   padding: 1rem; /* Example padding for content */
-// }
