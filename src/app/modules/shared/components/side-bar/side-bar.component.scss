@@ -1,20 +1,104 @@
 @import 'common.scss';
-:host{
-  width: 22%;
+
+:host {
+  width: 16%;
 }
-.sidebar{
+
+.sidebar {
   background: var(--main-bg-color);
   min-height: 100vh;
   width: 100%;
-  border:  1px solid red;
   padding: 1rem;
-  .sidebar__header{
+
+  .sidebar__header {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .sidebar__content{
+  .sidebar__content {
+    margin-top: 1rem;
+    & ::ng-deep p-accordion {
+      .p-accordion-header-link {
+        height: 50px;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        text-align: right;
 
+        &::before {
+          content: '';
+          position: absolute;
+          right: 6px;
+          width: 22.5px;
+          height: 22.5px;
+          background: url(../../../../../assets/images/blue-plane.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+
+        .p-accordion-header-text {
+          width: 50%;
+          margin-right: 0.5rem;
+        }
+      }
+
+      .p-accordion-content {
+        padding: 1rem;
+        background: var( --main-bg-color);
+        border: 0;
+        .itme {
+          margin: 1rem 0;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding-right: 1rem;
+          cursor: pointer;
+          transition: all 0.1s ease-in-out;
+          span {
+            @include textStyle(14px, 15.97px, $greta, var(--gray-5), 500);
+          }
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          &.active{
+            background: var(--highlight-color-1);
+            height: 36px;
+            border-radius: 20px;
+            // padding-right: 0.5rem;
+            span{
+              color: #fff;
+            }
+            & > svg{
+              color: #fff;
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .planes{
+      .itme{
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding-right: 1rem;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        span {
+          @include textStyle(16px, 18.97px, $greta, var(--gray-5), 500);
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,29 @@
+<section>
+  <div class="sidebar-container">
+    <svg (click)="closeSidebar()" class="close"><use href="#close-icon"></use></svg>
+
+    <div class="sidebar__header">
+      <img src="../../../../../assets/images/logo.png" alt="logo">
+    </div>
+    <div class="sidebar__content">
+      <p-accordion [activeIndex]="0" class="custom-accordion">
+        <p-accordionTab header="خدمات النقل الجوي والتعاون الدولي" class="custom-accordion">
+          <div class="itme" *ngFor="let tap of taps; let i = index" [class.active]="activeItem === i"
+            (click)="activeItem = i" (click)="handleClick(i)">
+            <svg>
+              <use [attr.href]="tap.icon"></use>
+            </svg>
+            <span>{{ tap.title }}</span>
+          </div>
+        </p-accordionTab>
+      </p-accordion>
+      <p-divider type="solid" />
+      <div class="planes">
+        <div class="itme" *ngFor="let plane of planes; let i = index">
+          <svg><use [attr.href]="plane.icon"></use></svg>
+          <span>{{ plane.title }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PopupService } from 'src/app/modules/core/services/popup.service';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  @Input() isMobile!: boolean
 
+  constructor(public popupService:PopupService){}
+  openSidebar(){
+    this.popupService.openSidebaPopup()
+  }
 }

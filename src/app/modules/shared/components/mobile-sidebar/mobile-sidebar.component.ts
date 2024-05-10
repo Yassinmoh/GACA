@@ -2,15 +2,21 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { AccordionModule } from 'primeng/accordion';
 import { DividerModule } from 'primeng/divider';
+import { PopupService } from 'src/app/modules/core/services/popup.service';
 
 @Component({
-  selector: 'app-side-bar',
+  selector: 'app-mobile-sidebar',
   standalone: true,
   imports: [AccordionModule,CommonModule,DividerModule],
-  templateUrl: './side-bar.component.html',
-  styleUrl: './side-bar.component.scss'
+  templateUrl: './mobile-sidebar.component.html',
+  styleUrl: './mobile-sidebar.component.scss'
 })
-export class SideBarComponent {
+export class MobileSidebarComponent {
+
+  constructor(private popupService:PopupService){}
+  closeSidebar(){
+    this.popupService.closeSidebaPopup()
+  }
 
   activeItem: number = 0;
   taps = [
