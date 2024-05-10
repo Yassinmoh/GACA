@@ -5,10 +5,14 @@
 
 @layer reset{
   button{
-    &:hover{
-      display: none;
+    &:focus{
+      outline: none;
     }
   }
+  .ui-button:focus, .ui-inputtext:focus, .ui-dropdown:focus, .ui-calendar:focus {
+    outline: none !important; /* Example outline style */
+  }
+
 }
 * {
   margin: 0;

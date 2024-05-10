@@ -1,0 +1,60 @@
+@import 'common.scss';
+
+footer{
+  width: 100%;
+  padding: 1rem 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .right{
+    button{
+      height: 50px;
+      width: 110px;
+      border-radius: 4px;
+      outline: none;
+      background: #fff;
+      border: 1px solid var(--gray-4) ;
+      @include textStyle(16px, 18.26px, $greta, var(--primary-font-colo), 700);
+    }
+  }
+  .left{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    button:nth-child(1){
+      height: 50px;
+      width: 90px;
+      outline: none;
+      border: 0;
+      background: transparent;
+      @include textStyle(16px, 18.26px, $greta, var(--highlight-color-1), 700);
+
+    }
+    button:nth-child(2){
+      height: 50px;
+      padding: 0 1.5rem;
+      width: fit-content;
+      outline: none;
+      border: 0;
+      border-radius: 4px;
+      background: var(--highlight-color-1);
+      @include textStyle(16px, 18.26px, $greta, #fff, 700);
+
+    }
+  }
+}
+
+
+
+@include DesktopScreen {
+  :host {
+    footer{
+      .left{
+        button:nth-child(2){
+          padding: 0 2rem;
+        }
+      }
+    }
+  }
+}

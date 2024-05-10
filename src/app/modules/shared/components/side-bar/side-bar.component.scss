@@ -1,9 +1,20 @@
+@import 'common.scss';
 :host{
   width: 22%;
 }
-section{
+.sidebar{
   background: var(--main-bg-color);
   min-height: 100vh;
   width: 100%;
+  border:  1px solid red;
+  padding: 1rem;
+  .sidebar__header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
+  .sidebar__content{
+
+  }
 }

@@ -8,8 +8,74 @@ body {
   font-family: var(--primary-font), sans-serif;
 }
 
+// Reaset
 
 
+input:focus {
+  outline: none;
+}
+
+.error-text {
+  color: var(--text-error);
+}
+
+
+//-----------------Start Custom intl-tel-input package style -----------------
+
+.iti.iti--allow-dropdown.iti--show-flags {
+  width: 100%;
+}
+
+.iti__country-container {
+  width: 30%;
+
+  .iti__dropdown-content {
+    max-width: 100% !important;
+  }
+
+  .iti__selected-country {
+    flex-direction: row-reverse;
+    background: var(--gray-6);
+    width: 100%;
+  }
+}
+
+.iti__arrow {
+  position: absolute;
+  right: 0;
+  border: 0 !important;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 4px;
+    width: 15px;
+    height: 10px;
+    background: url(../../../assets/images/arrow-down.svg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+@include tabletScreen {
+  .iti.iti--allow-dropdown.iti--show-flags {
+    .iti__country-container {
+      width: 17%;
+    }
+  }
+}
+
+@include MediumDesktopScreen {
+  .iti.iti--allow-dropdown.iti--show-flags {
+    .iti__country-container {
+      width: 33%;
+    }
+  }
+}
+
+//----------------- End Custom intl-tel-input package style -----------------
 .list-scroll {
   margin-top: 15px;
   overflow-x: auto;
@@ -27,7 +93,3 @@ body {
     overflow: hidden;
   }
 }
-
-
-
-
