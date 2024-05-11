@@ -9,22 +9,22 @@ import { MobileSidebarComponent } from '../../shared/components/mobile-sidebar/m
 import { PopupService } from '../services/popup.service';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-main-layout',
   standalone: true,
   imports: [RouterModule,HeaderComponent,SideBarComponent,FooterComponent,SidebarModule,MobileSidebarComponent,CommonModule],
   templateUrl: './main-layout.component.html',
-  styleUrl: './main-layout.component.scss'
+  styleUrl: './main-layout.component.scss',
+
 })
 export class MainLayoutComponent implements OnInit  {
-  constructor(private breakpointObserver: BreakpointObserver,public popupService:PopupService) {}
   isMobile!:boolean
+
+  constructor(private breakpointObserver: BreakpointObserver,public popupService:PopupService) {}
+
   ngOnInit() {
     this.breakpointObserver.observe([Breakpoints.HandsetPortrait, Breakpoints.HandsetLandscape])
-      .subscribe(result => {
-        this.isMobile = result.matches;
-        console.log("isMobile",this.isMobile);
-
-      });
+      .subscribe(result => this.isMobile = result.matches);
   }
 }

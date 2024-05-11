@@ -2,7 +2,7 @@
   <app-intro></app-intro>
   <div class="form__section">
     <p-accordion [multiple]="true">
-      <p-accordionTab class="accordion_header" header="البيانات الاساسية">
+      <p-accordionTab class="accordion_header" header="البيانات الاساسية" role="heading">
         <form [formGroup]="section1Form">
           <div class="form-group">
             <label for="client">اختر العميل</label>
@@ -46,7 +46,7 @@
         </form>
       </p-accordionTab>
 
-      <p-accordionTab class="accordion_header" header="معلومات المشغل">
+      <p-accordionTab class="accordion_header" header="معلومات المشغل" role="heading">
         <form [formGroup]="section1Form">
           <div class="form-group">
             <label for="client">الدولة</label>
@@ -95,7 +95,34 @@
         </form>
       </p-accordionTab>
 
-      <p-accordionTab class="accordion_header" header="الغرض من الرحلة">
+      <p-accordionTab class="accordion_header" header="الغرض من الرحلة" role="heading">
+        <form [formGroup]="section1Form">
+          <div class="form-group">
+            <label for="client">الغرض من الرحلة</label>
+            <p-dropdown [options]="clients" formControlName="client" required class="custom-dropdown"></p-dropdown>
+          </div>
+        </form>
+      </p-accordionTab>
+
+      <p-accordionTab class="accordion_header" header="معلومات الطائرة" role="heading">
+        <form [formGroup]="section1Form">
+          <div class="form-group">
+            <label for="client">الغرض من الرحلة</label>
+            <p-dropdown [options]="clients" formControlName="client" required class="custom-dropdown"></p-dropdown>
+          </div>
+        </form>
+      </p-accordionTab>
+
+      <p-accordionTab class="accordion_header" header="تفاصيل الرحلة" role="heading">
+        <form [formGroup]="section1Form">
+          <div class="form-group">
+            <label for="client">الغرض من الرحلة</label>
+            <p-dropdown [options]="clients" formControlName="client" required class="custom-dropdown"></p-dropdown>
+          </div>
+        </form>
+      </p-accordionTab>
+
+      <p-accordionTab class="accordion_header" header="ملاحظات" role="heading">
         <form [formGroup]="section1Form">
           <div class="form-group">
             <label for="client">الغرض من الرحلة</label>
